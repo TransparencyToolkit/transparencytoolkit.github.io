@@ -8,8 +8,7 @@
 # Site settings
 title: Transparency Toolkit Styleguide
 email: info@transparencytoolkit.org
-description: > This is a styleguide for Transparency Toolkit that can be used
-    across applications and public websites and in print material 
+description: > # This is a styleguide for Transparency Toolkit
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://transparencytoolkit.org" # the base hostname & protocol for your site
 twitter_username: jekyllrb
