@@ -1,0 +1,9 @@
+/* Just for Styleguide page itself
+ */
+
+#icons i {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
