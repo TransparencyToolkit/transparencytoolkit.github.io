@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // Naivigation Menu
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
 
@@ -11,7 +13,7 @@ $(document).ready(function() {
     });
   });
 
-
+  // Selectize
   $('#input-tags2').selectize({
     plugins: ['remove_button', 'restore_on_backspace'],
     delimiter: ',',
