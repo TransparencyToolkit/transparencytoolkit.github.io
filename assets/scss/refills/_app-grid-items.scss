@@ -1,0 +1,154 @@
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.app-grid-items {
+  $action-color: #477DCA !default;
+  $base-background-color: white !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+
+  $grid-items-background: $base-background-color;
+  $grid-item-background: desaturate($action-color, 30%);
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 17em;
+
+  @include clearfix;
+
+  .app-grid-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .app-grid-item {
+    @include transition (all 0.2s ease-in-out);
+    background: $base-white;
+    border-bottom: ($grid-item-border-size * 2) solid $grid-items-background;
+    border-left: 0;
+    border-right: ($grid-item-border-size * 2) solid $grid-items-background;
+    border-top: 0;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    outline: none;
+    padding: 2em;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    background-color: $base-white;
+    box-shadow: 0px;
+
+    &:focus,
+    &:hover {
+      background-color: $gray-light;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+  }
+
+  .app-grid-item h1 {
+    display: block;
+    color: $base-black;
+    font-family: $font-sourcesansbold;
+    font-size: 1.75em;
+    line-height: 1em;
+    margin-top: .35em;
+    margin-bottom: 1em;
+  }
+
+  .app-grid-item p {
+    color: $gray-dark;
+    line-height: 1.5em;
+    margin: auto;
+
+    @include media($medium-screen) {
+      max-width: 70%;
+    }
+  }
+
+  .app-grid-item button {
+    margin-top: 2em;
+    background-color: $gray-dark;
+    border-radius: 0px;
+    font-size: .85em;
+    line-height: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .app-grid-item:hover button,
+  .app-grid-item:hover button:hover {
+    background-color: $gray-darker;
+  }
+
+  .app-grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .app-grid-item-not,
+  .app-grid-item-big-not {
+    @include transition (all 0.2s ease-in-out);
+    background: transparent;
+    border-bottom: ($grid-item-border-size * 2) solid $grid-items-background;
+    border-left: 0;
+    border-right: ($grid-item-border-size * 2) solid $grid-items-background;
+    border-top: 0;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    box-shadow: 0px;
+
+    div {
+      height: 100%;
+      border: 4px dotted $gray-medium;
+      border-radius: ($base-border-radius * 2);
+
+      h2 {
+        margin-top: 1.75em;
+        margin-bottom: .5em;
+        color: $gray-medium;
+      }
+
+      h2:nth-child(2) {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      p {
+        color: $gray-lighter;
+      }
+    }
+  }
+
+}

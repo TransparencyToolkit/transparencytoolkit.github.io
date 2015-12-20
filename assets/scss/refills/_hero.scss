@@ -1,0 +1,76 @@
+.hero {
+
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-background-top: #7F99BE;
+  $hero-background-bottom: #20392B;
+  $hero-color: $base-white;
+  $gradient-angle: 10deg;
+  $hero-image: '../images/NSA-Faces-Website.jpg';
+  $hero-text-shadow: 2px 2px 2px $base-black;
+
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color: $base-background-color;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+
+  .hero-logo img {
+    height: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .hero-logo i {
+    font-size: 8em;
+    color: $hero-color;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        color: $hero-color;
+        font-size: 2.5em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        text-shadow: $hero-text-shadow;
+
+        @include media($large-screen) {
+          font-size: 3.5em;
+        }
+      }
+
+      h2 {
+        color: $base-white;
+        text-transform: capitalize;
+        text-shadow: $hero-text-shadow;
+      }
+
+      p {
+        color: $hero-color;
+        line-height: 1.4em;
+        text-shadow: $hero-text-shadow;
+        margin: 0 auto .5em auto;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 60%;
+        }
+      }
+
+      a {
+        color: $brand-warning;
+      }
+    }
+  }
+}

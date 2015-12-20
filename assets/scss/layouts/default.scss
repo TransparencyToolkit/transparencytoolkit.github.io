@@ -1,0 +1,11 @@
+/* Layouts - Default
+ */
+
+body.default {
+
+  .wrapper {
+    @include outer-container;
+    padding: 3em 1.5em;
+  }
+
+}

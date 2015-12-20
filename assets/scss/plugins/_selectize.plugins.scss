@@ -1,0 +1,90 @@
+.selectize-control.plugin-drag_drop {
+	&.multi > .selectize-input > div.ui-sortable-placeholder {
+		visibility: visible !important;
+		background: #f2f2f2 !important;
+		background: rgba(black, 0.06) !important;
+		border: 0 none !important;
+		@include selectize-box-shadow (inset 0 0 12px 4px white);
+	}
+	.ui-sortable-placeholder::after {
+		content: '!';
+		visibility: hidden;
+	}
+	.ui-sortable-helper {
+		@include selectize-box-shadow (0 2px 5px rgba(black, .2));
+	}
+}
+.selectize-dropdown-header {
+	position: relative;
+	padding: $selectize-padding-dropdown-item-y $selectize-padding-dropdown-item-x;
+	border-bottom: 1px solid $selectize-color-border;
+	background: mix($selectize-color-dropdown, $selectize-color-border, 85%);
+	@include selectize-border-radius ($selectize-border-radius $selectize-border-radius 0 0);
+}
+.selectize-dropdown-header-close {
+	position: absolute;
+	right: $selectize-padding-dropdown-item-x;
+	top: 50%;
+	color: $selectize-color-text;
+	opacity: 0.4;
+	margin-top: -12px;
+	line-height: 20px;
+	font-size: 20px !important;
+}
+.selectize-dropdown-header-close:hover {
+	color: darken($selectize-color-text, 25%);
+}
+.selectize-dropdown.plugin-optgroup_columns {
+	.optgroup {
+		border-right: 1px solid #f2f2f2;
+		border-top: 0 none;
+		float: left;
+		@include selectize-box-sizing (border-box);
+	}
+	.optgroup:last-child {
+		border-right: 0 none;
+	}
+	.optgroup:before {
+		display: none;
+	}
+	.optgroup-header {
+		border-top: 0 none;
+	}
+}
+.selectize-control.plugin-remove_button {
+	[data-value] {
+		position: relative;
+		padding-right: 36px !important;
+	}
+	[data-value] .remove {
+		z-index: 1; /* fixes ie bug (see #392) */
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 24px;
+		text-align: center;
+		font-weight: bold;
+		font-size: $selectize-remove_button-font-size;
+		color: $selectize-remove_button-color;
+		text-decoration: none;
+		vertical-align: middle;
+		display: inline-block;
+		padding: $selectize-remove_button-padding;
+		border-left: 1px solid $selectize-color-item-border;
+		@include selectize-border-radius (0 2px 2px 0);
+		@include selectize-box-sizing (border-box);
+	}
+	[data-value] .remove:hover {
+		background: rgba(black, 0.05);
+	}
+	[data-value].active .remove {
+		border-left-color: $selectize-color-item-active-border;
+	}
+	.disabled [data-value] .remove:hover {
+		background: none;
+	}
+	.disabled [data-value] .remove {
+		border-left-color: lighten(desaturate($selectize-color-item-border, 100%), $selectize-lighten-disabled-item-border);
+	}
+}

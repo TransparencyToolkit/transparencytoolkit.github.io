@@ -1,0 +1,81 @@
+// Typography
+
+$font-sourcesansbold: 'SourceSansPro-Bold';
+$font-league: 'League Spartan';
+
+$base-font-family: $helvetica;
+$heading-font-family: $font-league;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #3C88D7;
+$gray-darker: #555555;
+$gray-dark: #747373;
+$gray-medium: #8F8F8F;
+$gray-light: #CFCFCF;
+$gray-lighter: #EEEEEE;
+
+$base-black:         #000000;
+$base-white:         #FFFFFF;
+
+$brand-primary:      #3C88D7;
+$brand-success:      #62C947;
+$brand-info:         #FFFFFF;
+$brand-warning:      #FFC31C;
+$brand-danger:       #C61C1C;
+
+
+// Font Colors
+$base-font-color: $base-black;
+$action-color: $brand-primary;
+
+// Border
+$base-border-color: $gray-light;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #5B5B5B;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$form-input-background: $base-white;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+
+
+// Refills
+$refills-serif: "Lusitana", $georgia;
+$refills-narrow-sans: "Oswald", sans-serif;
+$refills-second-serif: $georgia;
+
+$refills-nav-height: 60px;
+
+$refills-body-background-color: $base-background-color;
+$refills-color: lighten(desaturate(teal, 60%), 40%);
+$refills-accent-color: #477dca;
+$refills-logo-color: #93e9be;
+$refills-anchor-color: #f55481;
+$refills-hero-background: #e7f1ec;
+$refills-secondary-anchor-color: darken($refills-hero-background, 35%);
+$refills-highlight-color: #bbb295;
+$refills-white-shadow: 0 1px 1px transparentize(#fff, 0.6);
+
+$refills-medium-screen: em(640);
+$refills-large-screen: em(860);
