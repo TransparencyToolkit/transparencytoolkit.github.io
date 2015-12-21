@@ -543,7 +543,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       background-color: #3C88D7; }
 
 fieldset {
-  background-color: #f3f3f3;
+  background-color: #5B5B5B;
   border: 1px solid #CFCFCF;
   margin: 0 0 1.5em;
   padding: 1.5em; }
@@ -586,7 +586,7 @@ select[multiple=multiple] {
     outline: none; }
   input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
   select[multiple=multiple]:disabled {
-    background-color: #565656;
+    background-color: #f2f2f2;
     cursor: not-allowed; }
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
     select[multiple=multiple]:disabled:hover {
@@ -919,7 +919,7 @@ header.navigation {
           header.navigation .search-bar form input[type=search] {
             width: 100%; } }
       header.navigation .search-bar form button[type=submit] {
-        background: #5B5B5B;
+        background: #FFFFFF;
         color: #FFFFFF;
         border: none;
         bottom: 0.3em;
@@ -947,7 +947,7 @@ header.navigation {
 .hero {
   background: url("../images/NSA-Faces-Website.jpg"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background: url("../images/NSA-Faces-Website.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background-color: #5B5B5B;
+  background-color: #FFFFFF;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1068,9 +1068,9 @@ header.navigation {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: #FFFFFF;
-  border-bottom: 18px solid #5B5B5B;
+  border-bottom: 18px solid #FFFFFF;
   border-left: 0;
-  border-right: 18px solid #5B5B5B;
+  border-right: 18px solid #FFFFFF;
   border-top: 0;
   cursor: pointer;
   float: left;
@@ -1129,9 +1129,9 @@ header.navigation {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: transparent;
-  border-bottom: 18px solid #5B5B5B;
+  border-bottom: 18px solid #FFFFFF;
   border-left: 0;
-  border-right: 18px solid #5B5B5B;
+  border-right: 18px solid #FFFFFF;
   border-top: 0;
   cursor: pointer;
   float: left;
@@ -1690,5 +1690,8 @@ body.default .wrapper {
     clear: both;
     content: "";
     display: table; }
+
+body.default.gray {
+  background-color: #5B5B5B; }
 
 /*# sourceMappingURL=screen.css.map */
