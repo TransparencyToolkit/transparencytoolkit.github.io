@@ -1,0 +1,33 @@
+/* App Grid Sidebars */
+
+.app-sidebars {
+
+  @include outer-container;
+  margin-bottom: 2em;
+
+  .app-sidebars-small,
+  .app-sidebars-large {
+    background: $base-white;
+    padding: 1.5em;
+    overflow: hidden;
+    outline: none;
+    float: left;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $base-black;
+    }
+
+    p {
+      color: $gray-dark;
+    }
+  }
+
+  .app-sidebars-small {
+    @include span-columns(4);
+  }
+
+  .app-sidebars-large {
+    @include span-columns(8);
+  }
+
+}

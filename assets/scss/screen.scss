@@ -4,7 +4,7 @@
 @import "fonts";
 @import "icons";
 @import "bourbon/bourbon";
-@import "grid-settings";
+//s@import "grid-settings";
 @import "neat/neat";
 @import "normalize";
 @import "base/base";
@@ -14,6 +14,8 @@
 @import "refills/hero";
 @import "refills/app-elements";
 @import "refills/app-grid-items";
+@import "refills/app-grid-sidebars";
+
 @import "refills/type-system-article";
 @import "refills/footer";
 
