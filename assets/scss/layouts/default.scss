@@ -9,3 +9,7 @@ body.default {
   }
 
 }
+
+body.default.gray {
+  background-color: $secondary-background-color;
+}
