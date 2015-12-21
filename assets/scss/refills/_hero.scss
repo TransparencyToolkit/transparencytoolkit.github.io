@@ -6,11 +6,9 @@
   $hero-background-bottom: #20392B;
   $hero-color: $base-white;
   $gradient-angle: 10deg;
-  $hero-image: '../images/NSA-Faces-Website.jpg';
   $hero-text-shadow: 2px 2px 2px $base-black;
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: $base-background-color;
+  background-color: $secondary-background-color;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;

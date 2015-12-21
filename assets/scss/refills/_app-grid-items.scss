@@ -1,14 +1,15 @@
+/* App Grid Items */
+
 @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
 
 .app-grid-items {
   $action-color: #477DCA !default;
-  $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
 
-  $grid-items-background: $base-background-color;
+  $grid-items-background: $secondary-background-color;
   $grid-item-background: desaturate($action-color, 30%);
   $grid-item-border-size: 9px;
   $grid-item-columns: 4;
@@ -46,7 +47,6 @@
       @include grid-item-columns($grid-item-columns);
     }
 
-    background-color: $base-white;
     box-shadow: 0px;
 
     &:focus,
