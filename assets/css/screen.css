@@ -543,7 +543,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       background-color: #3C88D7; }
 
 fieldset {
-  background-color: #5B5B5B;
+  background: #EEEEEE;
   border: 1px solid #CFCFCF;
   margin: 0 0 1.5em;
   padding: 1.5em; }
@@ -704,7 +704,12 @@ picture {
 /* Colors */
 .background-gray {
   background: #5B5B5B; }
-  .background-gray h1 {
+  .background-gray h1,
+  .background-gray h2,
+  .background-gray h3,
+  .background-gray h4,
+  .background-gray h5,
+  .background-gray h6 {
     color: #FFFFFF; }
 
 header.navigation {
@@ -945,9 +950,7 @@ header.navigation {
           display: block; } }
 
 .hero {
-  background: url("../images/NSA-Faces-Website.jpg"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("../images/NSA-Faces-Website.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background-color: #FFFFFF;
+  background-color: #5B5B5B;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1045,6 +1048,7 @@ header.navigation {
   content: "";
   display: table; }
 
+/* App Grid Items */
 .app-grid-items::after {
   clear: both;
   content: "";
@@ -1068,9 +1072,9 @@ header.navigation {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: #FFFFFF;
-  border-bottom: 18px solid #FFFFFF;
+  border-bottom: 18px solid #5B5B5B;
   border-left: 0;
-  border-right: 18px solid #FFFFFF;
+  border-right: 18px solid #5B5B5B;
   border-top: 0;
   cursor: pointer;
   float: left;
@@ -1081,7 +1085,6 @@ header.navigation {
   text-align: center;
   text-decoration: none;
   width: 100%;
-  background-color: #FFFFFF;
   box-shadow: 0px; }
   @media screen and (min-width: 53.75em) {
     .app-grid-items .app-grid-item {
@@ -1129,9 +1132,9 @@ header.navigation {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: transparent;
-  border-bottom: 18px solid #FFFFFF;
+  border-bottom: 18px solid #5B5B5B;
   border-left: 0;
-  border-right: 18px solid #FFFFFF;
+  border-right: 18px solid #5B5B5B;
   border-top: 0;
   cursor: pointer;
   float: left;
@@ -1164,6 +1167,49 @@ header.navigation {
     .app-grid-items .app-grid-item-not div p,
     .app-grid-items .app-grid-item-big-not div p {
       color: #EEEEEE; }
+
+/* App Grid Sidebars */
+.app-sidebars {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em; }
+  .app-sidebars::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .app-sidebars .app-sidebars-small,
+  .app-sidebars .app-sidebars-large {
+    background: #FFFFFF;
+    padding: 1.5em;
+    overflow: hidden;
+    outline: none;
+    float: left; }
+    .app-sidebars .app-sidebars-small h1, .app-sidebars .app-sidebars-small h2, .app-sidebars .app-sidebars-small h3, .app-sidebars .app-sidebars-small h4, .app-sidebars .app-sidebars-small h5, .app-sidebars .app-sidebars-small h6,
+    .app-sidebars .app-sidebars-large h1,
+    .app-sidebars .app-sidebars-large h2,
+    .app-sidebars .app-sidebars-large h3,
+    .app-sidebars .app-sidebars-large h4,
+    .app-sidebars .app-sidebars-large h5,
+    .app-sidebars .app-sidebars-large h6 {
+      color: #000000; }
+    .app-sidebars .app-sidebars-small p,
+    .app-sidebars .app-sidebars-large p {
+      color: #747373; }
+  .app-sidebars .app-sidebars-small {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .app-sidebars .app-sidebars-small:last-child {
+      margin-right: 0; }
+  .app-sidebars .app-sidebars-large {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .app-sidebars .app-sidebars-large:last-child {
+      margin-right: 0; }
 
 article.type-system {
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -1271,7 +1317,7 @@ article.type-system {
 
 .footer {
   background: #EEEEEE;
-  padding: 3em 30px;
+  padding: 3em 1.618em;
   width: 100%; }
   .footer .footer-logo {
     margin-bottom: 1em;
