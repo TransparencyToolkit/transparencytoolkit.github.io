@@ -1,19 +1,67 @@
-ul,
+ul {
+  list-style-type: disc;
+  margin-bottom: $small-spacing;
+  padding-left: $base-spacing;
+}
+
 ol {
+  list-style-type: decimal;
+  margin-bottom: $small-spacing;
+  padding-left: $base-spacing;
+}
+
+ul.unstyled,
+ol.unstyled {
   list-style-type: none;
   margin: 0 0 $base-spacing 0;
   padding: 0;
+}
 
-  &%default-ul {
-    list-style-type: disc;
-    margin-bottom: $small-spacing;
-    padding-left: $base-spacing;
-  }
+ul.list-items {
+  list-style: none;
+  margin: 0 0 $base-spacing 0;
+  padding: 0;
 
-  &%default-ol {
-    list-style-type: decimal;
-    margin-bottom: $small-spacing;
-    padding-left: $base-spacing;
+  li {
+    background: $gray-lighter;
+    margin: $small-spacing 0;
+    padding: $small-spacing ($base-spacing / 1.5);
+    border-radius: $base-border-radius;
+
+    i {
+      margin-right: $small-spacing;
+    }
+
+    a.view,
+    a.edit,
+    a.remove {
+      float: right;
+      color: $base-white;
+      font-weight: bold;
+      padding: 0 ($small-spacing / 2);
+      border-radius: $base-border-radius;
+    }
+
+    a.view {
+      background-color: $brand-primary;
+      &:hover {
+        background-color: darken($brand-primary, 10%);
+      }
+    }
+
+    a.edit {
+      background-color: $brand-success;
+      &:hover {
+        background-color: darken($brand-success, 10%);
+      }
+    }
+
+    a.remove {
+      background-color: $brand-danger;
+      &:hover {
+        background-color: darken($brand-danger, 10%);
+      }
+    }
   }
 }
 
