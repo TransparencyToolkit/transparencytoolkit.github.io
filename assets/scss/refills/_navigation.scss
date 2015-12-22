@@ -114,9 +114,7 @@ header.navigation {
     }
   }
 
-
-// The nav items
-
+  // The nav items
   ul li.nav-link {
     background: $navigation-background;
     display: block;
@@ -156,9 +154,7 @@ header.navigation {
     padding-bottom: 3px;
   }
 
-
-// Sub menus
-
+  // Sub menus
   li.more.nav-link {
     padding-right: 0;
 
@@ -272,9 +268,7 @@ header.navigation {
     }
   }
 
-
-// Elements on the far right
-
+  // Elements on the far right
   .navigation-tools {
     background: #505050;
     clear: both;
@@ -288,9 +282,7 @@ header.navigation {
     }
   }
 
-
-// Search bar
-
+  // Search bar
   .search-bar {
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
@@ -307,7 +299,7 @@ header.navigation {
         @include box-sizing(border-box);
         background: $base-white;
         border-radius: 0;
-        border: $navigation-search-border;
+        border: 0px;
         color: $base-black;
         font-size: 1em;
         font-style: normal;
@@ -351,4 +343,135 @@ header.navigation {
       }
     }
   }
+
+  // Dropdown
+  .dropdown {
+    $base-border-radius: 3px !default;
+    $base-line-height: 1.4em !default;
+    $base-background-color: $base-white !default;
+    $dark-gray: #333 !default;
+    $large-screen: em(860) !default;
+    $base-font-color: $dark-gray !default;
+    $dropdown-color: $base-font-color;
+    $dropdown-description-color: lighten($dropdown-color, 40%);
+    $dropdown-background: $base-background-color;
+    $dropdown-border: 0px;
+    $dropdown-background-hover: $gray-lighter;
+    $dropdown-inner-border: 1px solid silver;
+    $dropdown-height: 34px;
+    $dropdown-padding: 2em;
+    $dropdown-distance-from-menu: 50px;
+    $dropdown-arrow-top-distance: 0;
+
+    line-height: $base-line-height;
+    float: left;
+    padding: 0.80em 0.85em 0.7em 0.75em;
+
+    .dropdown-container {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+    }
+
+    .dropdown-description {
+      background: $dropdown-background;
+      border: 0px;
+      color: $dropdown-description-color;
+      float: left;
+      font-size: 0.7em;
+      line-height: $dropdown-height;
+      margin: 0;
+      padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+      @include media($large-screen) {
+        font-size: 1em;
+      }
+    }
+
+    .dropdown-button {
+      background: $dropdown-background;
+      border: 0px;
+      cursor: pointer;
+      float: right;
+      font-size: 0.7em;
+      line-height: $dropdown-height;
+      margin: 0;
+      padding: 0 ($dropdown-padding) 0 ($dropdown-padding / 2);
+      position: relative;
+
+      @include media($large-screen) {
+        font-size: 1em;
+        padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+      }
+    }
+
+    .dropdown-button:hover {
+      background-color: $dropdown-background-hover;
+    }
+
+    .dropdown-button:after {
+      color: $base-font-color;
+      content: "\25BE";
+      display: block;
+      position: absolute;
+      right: $dropdown-padding / 2;
+      top: $dropdown-arrow-top-distance;
+    }
+
+    .dropdown-menu {
+      @include transition (all 0.2s ease-in-out);
+      background: $dropdown-background;
+      border-radius: $base-border-radius;
+      border: $dropdown-border;
+      box-shadow: 0 2px 2px transparentize(black, 0.8);
+      color: $dropdown-color;
+      cursor: pointer;
+      display: none;
+      margin: 0;
+      overflow: show;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: $dropdown-distance-from-menu;
+      min-width: 200px;
+      z-index: 99999;
+
+      &:before {
+        @include position(absolute, 0 1em 0 0);
+        color: $dropdown-background;
+        content: "\25b2";
+        font-size: 1.5em;
+        pointer-events: none;
+        top: -.9em;
+        right: .35em;
+      }
+    }
+
+    .dropdown-menu li {
+      border-bottom: $dropdown-inner-border;
+      color: $dropdown-color;
+      list-style: none;
+      padding: $dropdown-padding * .25 0;
+    }
+
+    .dropdown-menu li:hover {
+      background: $dropdown-background-hover;
+      border-radius: $base-border-radius;
+    }
+
+    .dropdown-menu li:first-child {
+      border-radius: $base-border-radius;
+    }
+
+    .dropdown-menu li:last-child {
+      border: none;
+      border-radius: $base-border-radius;
+    }
+
+    .show-menu {
+      display: block;
+    }
+
+  }
+
 }
