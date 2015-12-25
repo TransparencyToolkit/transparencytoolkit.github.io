@@ -23,14 +23,7 @@
     box-sizing: $type;
 }
 @mixin selectize-vertical-gradient($color-top, $color-bottom) {
-    background-color: mix($color-top, $color-bottom, 60%);
-    background-image: -moz-linear-gradient(top, $color-top, $color-bottom); // FF 3.6+
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($color-top), to($color-bottom)); // Safari 4+, Chrome 2+
-    background-image: -webkit-linear-gradient(top, $color-top, $color-bottom); // Safari 5.1+, Chrome 10+
-    background-image: -o-linear-gradient(top, $color-top, $color-bottom); // Opera 11.10
-    background-image: linear-gradient(to bottom, $color-top, $color-bottom); // Standard, IE10
-    background-repeat: repeat-x;
-    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{argb($color-top)}', endColorstr='#{argb($color-bottom)}', GradientType=0)"; // IE9 and down
+//    background-color: mix($color-top, $color-bottom, 60%);
 }
 
 @import "selectize.plugins";
@@ -39,7 +32,9 @@
     position: relative;
 }
 
-.selectize-dropdown, .selectize-input, .selectize-input input {
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
     color: $selectize-color-text;
     font-family: $selectize-font-family;
     font-size: $selectize-font-size;
@@ -47,8 +42,10 @@
     -webkit-font-smoothing: $selectize-font-smoothing;
 }
 
-.selectize-input, .selectize-control.single .selectize-input.input-active {
-    background: $selectize-color-input;
+.selectize-input,
+.selectize-control.single
+.selectize-input.input-active {
+    background: $form-input-background;
     cursor: text;
     display: inline-block;
 }
@@ -169,7 +166,8 @@
             @include selectize-border-radius(1px);
         }
     }
-    [data-selectable], .optgroup-header {
+    [data-selectable],
+    .optgroup-header {
         padding: $selectize-padding-dropdown-item-y $selectize-padding-dropdown-item-x;
     }
     .optgroup:first-child .optgroup-header {

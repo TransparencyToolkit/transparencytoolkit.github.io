@@ -1,0 +1,7 @@
+/* Grid Columns */
+
+.three-columns {
+  .one-column {
+    @include span-columns(4);
+  }
+}

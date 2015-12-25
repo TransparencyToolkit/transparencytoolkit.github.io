@@ -1,0 +1,18 @@
+/* Just for Styleguide page itself */
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "normalize";
+@import "base/base";
+
+
+#hero div.hero {
+  background-image: url('../images/NSA-Faces-Website.jpg');
+}
+
+#icons i {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}

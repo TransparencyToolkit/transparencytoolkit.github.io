@@ -14,12 +14,13 @@
  * @author Brian Reavis <brian@thirdroute.com>
  */
 
-$selectize-color-item: $gray-light !default;
+$selectize-color-item: $brand-primary !default;
 $selectize-color-item-text: $base-white !default;
 $selectize-color-item-active-text: $base-white !default;
-$selectize-color-item-border: #0073bb !default;
-$selectize-color-item-active: #92c836 !default;
-$selectize-color-item-active-border: #00578d !default;
+$selectize-color-item-border: darken($brand-primary, 10%) !default;
+$selectize-color-item-active: $brand-success !default;
+$selectize-color-item-active-text: $selectize-color-text !default;
+$selectize-color-item-active-border: darken($brand-success, 10%) !default;
 
 $selectize-width-item-border: 1px !default;
 $selectize-caret-margin: 0 1px !default;
@@ -35,13 +36,6 @@ $selectize-color-highlight: rgba(125,168,208,0.2) !default;
 $selectize-color-input: $base-white !default;
 $selectize-color-input-full: $selectize-color-input !default;
 $selectize-color-disabled: #fafafa !default;
-
-$selectize-color-item: #f2f2f2 !default;
-$selectize-color-item-text: $selectize-color-text !default;
-$selectize-color-item-border: #d0d0d0 !default;
-$selectize-color-item-active: #e8e8e8 !default;
-$selectize-color-item-active-text: $selectize-color-text !default;
-$selectize-color-item-active-border: #cacaca !default;
 
 $selectize-color-dropdown: $base-white !default;
 $selectize-color-dropdown-border: $selectize-color-border !default;
@@ -59,19 +53,19 @@ $selectize-lighten-disabled-item-text: 30% !default;
 $selectize-lighten-disabled-item-border: 30% !default;
 $selectize-opacity-disabled: 0.5 !default;
 
-$selectize-shadow-input: inset 0 1px 1px rgba(black, 0.1) !default;
-$selectize-shadow-input-focus: inset 0 1px 2px rgba(black, 0.15) !default;
-$selectize-border: 1px solid $selectize-color-border !default;
+$selectize-shadow-input: $form-box-shadow !default;
+$selectize-shadow-input-focus: $form-box-shadow-focus !default;
+$selectize-border: $base-border !default;
 $selectize-dropdown-border: 1px solid $selectize-color-dropdown-border !default;
 $selectize-border-radius: 3px !default;
 
 $selectize-width-item-border: 0 !default;
 $selectize-max-height-dropdown: 200px !default;
 
-$selectize-padding-x: 16px !default;
-$selectize-padding-y: 18px !default;
-$selectize-padding-item-x: 16px !default;
-$selectize-padding-item-y: 6px !default;
+$selectize-padding-x: 12px !default;
+$selectize-padding-y: 14px !default;
+$selectize-padding-item-x: 14px !default;
+$selectize-padding-item-y: 5px !default;
 $selectize-padding-dropdown-item-x: $selectize-padding-x !default;
 $selectize-padding-dropdown-item-y: 5px !default;
 $selectize-margin-item-x: 15px !default;
@@ -93,59 +87,67 @@ $selectize-remove_button-color: $gray-darker;
 @import "selectize";
 
 .selectize-control {
-    &.multi {
-        .selectize-input {
-            &.has-items {
-                $padding-x: $selectize-padding-x - 3px;
-                padding-left: $padding-x;
-                padding-right: $padding-x;
-            }
-            &.disabled [data-value] {
-                color: #999;
-                text-shadow: none;
-                background: none;
-                @include selectize-box-shadow(none);
+  &.multi {
+    .selectize-input {
+      &.has-items {
+        $padding-x: $selectize-padding-x - 3px;
+        padding-left: $padding-x;
+        padding-right: $padding-x;
+      }
+      &.disabled [data-value] {
+        color: #999;
+        text-shadow: none;
+        background: none;
+        @include selectize-box-shadow(none);
 
-                &, .remove {
-                    border-color: #e6e6e6;
-                }
-                .remove {
-                    background: none;
-                }
-            }
-            [data-value] {
-                text-shadow: 0 1px 0 rgba(0,51,83,0.3);
-                @include selectize-border-radius(3px);
-                @include selectize-vertical-gradient(#1da7ee, #178ee9);
-                @include selectize-box-shadow("0 1px 0 rgba(black, 0.2), inset 0 1px rgba(white, 0.03)");
-                &.active {
-                    @include selectize-vertical-gradient(#008fd8, #0075cf);
-                }
-            }
+        &, .remove {
+          border-color: #e6e6e6;
         }
-    }
-    &.single {
-        .selectize-input {
-            @include selectize-box-shadow("0 1px 0 rgba(black, 0.05), inset 0 1px 0 rgba(white, 0.8)");
-            @include selectize-vertical-gradient (#fefefe, #f2f2f2);
+        .remove {
+            background: none;
+          }
         }
+        [data-value] {
+          text-shadow: 0 1px 0 rgba(0,51,83,0.3);
+          @include selectize-border-radius(3px);
+          @include selectize-box-shadow("0 1px 0 rgba(black, 0.2), inset 0 1px rgba(white, 0.03)");
+          //background-color: purple;
+          &.active {
+            //@include selectize-vertical-gradient(#008fd8, #0075cf);
+          }
+      }
     }
+  }
+  &.single {@mixin selectize-vertical-gradient($color-top, $color-bottom) {
+    background-color: purple;
+
+    // background-color: mix($color-top, $color-bottom, 60%);
+  } @mixin selectize-vertical-gradient($color-top, $color-bottom) {
+    // background-color: mix($color-top, $color-bottom, 60%);
+    background-color: purple;
+  }
+    .selectize-input {
+      @include selectize-box-shadow("0 1px 0 rgba(black, 0.05), inset 0 1px 0 rgba(white, 0.8)");
+      //@include selectize-vertical-gradient (#fefefe, #f2f2f2);
+    }
+  }
 }
 
-.selectize-control.single .selectize-input, .selectize-dropdown.single {
-    border-color: #b8b8b8;
+.selectize-control.single .selectize-input,
+.selectize-dropdown.single {
+  border-color: #b8b8b8;
 }
 
 .selectize-dropdown {
-    .optgroup-header {
-        padding-top: $selectize-padding-dropdown-item-y + 2px;
-        font-weight: bold;
-        font-size: 0.85em;
+  .optgroup-header {
+    padding-top: $selectize-padding-dropdown-item-y + 2px;
+    font-weight: bold;
+    font-size: 0.85em;
+  }
+  .optgroup {
+    border-top: 1px solid $selectize-color-dropdown-border-top;
+    &:first-child {
+      border-top: 0 none;
     }
-    .optgroup {
-        border-top: 1px solid $selectize-color-dropdown-border-top;
-        &:first-child {
-            border-top: 0 none;
-        }
-    }
+  }
 }
