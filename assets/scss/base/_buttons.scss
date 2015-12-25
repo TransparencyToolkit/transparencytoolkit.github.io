@@ -1,27 +1,53 @@
-#{$all-buttons} {
-  appearance: none;
-  background-color: $action-color;
-  border: 0;
+/* Buttons */
+
+$button-basic-padding: 12px 25px;
+
+
+@mixin button-basic($base-color, $grayscale: false, $textsize: inherit, $padding: 12px 25px) {
+  $text-color: hsl(0, 0, 100%);
+
+  @if is-light($base-color) {
+    $text-color: hsl(0, 0, 20%);
+  }
+
+  background-color: $base-color;
   border-radius: $base-border-radius;
-  color: #fff;
-  cursor: pointer;
+  border: 0;
+  color: $text-color !important;
   display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  font-size: $textsize;
+  font-weight: bold;
   line-height: 1;
-  padding: $small-spacing $base-spacing;
+  padding: $padding;
   text-decoration: none;
+  background-clip: padding-box;
   transition: background-color $base-duration $base-timing;
-  user-select: none;
-  vertical-align: middle;
   white-space: nowrap;
 
-  &:hover,
-  &:focus {
-    background-color: shade($action-color, 20%);
-    color: #fff;
+  &:hover:not(:disabled) {
+
+    $base-color-hover: adjust-color($base-color, $saturation: 4%, $lightness: 5%);
+
+    @if $grayscale == true {
+      $base-color-hover: grayscale($base-color-hover);
+    }
+
+    background-color: $base-color-hover;
+    cursor: pointer;
+  }
+
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    $base-color-active: adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+
+    @if $grayscale == true {
+      $base-color-active: grayscale($base-color-active);
+    }
+
+    background-color: $base-color-active;
+    cursor: pointer;
   }
 
   &:disabled {
@@ -32,4 +58,53 @@
       background-color: $action-color;
     }
   }
+}
+
+
+.button-full {
+  width: 100% !important;
+  display: block !important;
+  text-align: center;
+}
+
+/* Buttons - Form Buttons */
+
+#{$all-buttons} {
+
+  @include button-basic($brand-primary, false, inherit, $button-basic-padding);
+
+  appearance: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+
+  user-select: none;
+  vertical-align: middle;
+}
+
+
+/* Buttons - Color Classes */
+
+.button.primary {
+  @include button-basic($brand-primary, false, inherit, $button-basic-padding)
+}
+
+.button.success {
+  @include button-basic($brand-success, false, inherit, $button-basic-padding)
+}
+
+.button.info {
+  @include button-basic($gray-light, false, inherit, $button-basic-padding)
+}
+
+.button.warning {
+  @include button-basic($brand-warning, false, inherit, $button-basic-padding)
+}
+
+.button.danger {
+  @include button-basic($brand-danger, false, inherit, $button-basic-padding)
+}
+
+.button.text {
+  @include button-basic(#FFFFFF, true, inherit, $button-basic-padding)
 }
