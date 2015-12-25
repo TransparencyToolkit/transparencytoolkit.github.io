@@ -4,14 +4,14 @@
 @import "fonts";
 @import "icons";
 @import "bourbon/bourbon";
-//s@import "grid-settings";
 @import "neat/neat";
-@import "normalize";
+@import "refills/normalize";
 @import "base/base";
 
 @import "refills/coloring";
 @import "refills/navigation";
 @import "refills/hero";
+@import "refills/grid-columns";
 @import "refills/app-elements";
 @import "refills/app-grid-items";
 @import "refills/app-grid-sidebars";

@@ -111,24 +111,21 @@ $selectize-remove_button-color: $gray-darker;
           text-shadow: 0 1px 0 rgba(0,51,83,0.3);
           @include selectize-border-radius(3px);
           @include selectize-box-shadow("0 1px 0 rgba(black, 0.2), inset 0 1px rgba(white, 0.03)");
-          //background-color: purple;
+          background-color: $selectize-color-item;
           &.active {
-            //@include selectize-vertical-gradient(#008fd8, #0075cf);
+            background-color: $selectize-color-item-active;
           }
       }
     }
   }
-  &.single {@mixin selectize-vertical-gradient($color-top, $color-bottom) {
+  &.single {
+
     background-color: purple;
 
-    // background-color: mix($color-top, $color-bottom, 60%);
-  } @mixin selectize-vertical-gradient($color-top, $color-bottom) {
-    // background-color: mix($color-top, $color-bottom, 60%);
-    background-color: purple;
-  }
     .selectize-input {
-      @include selectize-box-shadow("0 1px 0 rgba(black, 0.05), inset 0 1px 0 rgba(white, 0.8)");
-      //@include selectize-vertical-gradient (#fefefe, #f2f2f2);
+
+      background-color: green;
+
     }
   }
 }
