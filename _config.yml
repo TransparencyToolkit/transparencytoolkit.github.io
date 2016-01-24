@@ -11,8 +11,8 @@ email: info@transparencytoolkit.org
 description: > # This is a styleguide for Transparency Toolkit
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://transparencytoolkit.org" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: transparencykit
+github_username:  transparencytoolkit
 
 # Build settings
 markdown: kramdown

@@ -12,14 +12,14 @@
   font-weight: bold;
   font-style: normal; }
 @font-face {
-  font-family: 'TT-icons';
-  src: url("../fonts/TT-icons.eot?ew9np5");
-  src: url("../fonts/TT-icons.eot?ew9np5#iefix") format("embedded-opentype"), url("../fonts/TT-icons.ttf?ew9np5") format("truetype"), url("../fonts/TT-icons.woff?ew9np5") format("woff"), url("../fonts/TT-icons.svg?ew9np5#tt-icons") format("svg");
+  font-family: 'tt-icons';
+  src: url("../fonts/tt-icons.eot?o5m3rp");
+  src: url("../fonts/tt-icons.eot?o5m3rp#iefix") format("embedded-opentype"), url("../fonts/tt-icons.ttf?o5m3rp") format("truetype"), url("../fonts/tt-icons.woff?o5m3rp") format("woff"), url("../fonts/tt-icons.svg?o5m3rp#tt-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'TT-icons' !important;
+  font-family: 'tt-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -30,16 +30,16 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-work:before {
+.icon-agencies:before {
   content: "\e900"; }
 
-.icon-agencies:before {
+.icon-alerts:before {
   content: "\e901"; }
 
-.icon-alerts:before {
+.icon-analysis:before {
   content: "\e902"; }
 
-.icon-analysis:before {
+.icon-archive:before {
   content: "\e903"; }
 
 .icon-bookmark:before {
@@ -51,104 +51,152 @@ i {
 .icon-building:before {
   content: "\e906"; }
 
-.icon-certificate:before {
+.icon-calendar:before {
   content: "\e907"; }
 
-.icon-checkmark:before {
+.icon-certificate:before {
   content: "\e908"; }
 
-.icon-classification:before {
+.icon-checkmark:before {
   content: "\e909"; }
 
-.icon-codewords:before {
+.icon-classification:before {
   content: "\e90a"; }
 
-.icon-countries:before {
+.icon-clock:before {
   content: "\e90b"; }
 
-.icon-dashboard:before {
+.icon-code:before {
   content: "\e90c"; }
 
-.icon-decentralization:before {
+.icon-codewords:before {
   content: "\e90d"; }
 
-.icon-distributed:before {
+.icon-countries:before {
   content: "\e90e"; }
 
-.icon-document:before {
+.icon-dashboard:before {
   content: "\e90f"; }
 
-.icon-document-topic:before {
+.icon-decentralization:before {
   content: "\e910"; }
 
-.icon-download:before {
+.icon-distributed:before {
   content: "\e911"; }
 
-.icon-education:before {
+.icon-document:before {
   content: "\e912"; }
 
-.icon-google:before {
+.icon-documents:before {
   content: "\e913"; }
 
-.icon-harvester:before {
+.icon-document-topic:before {
   content: "\e914"; }
 
-.icon-indeed:before {
+.icon-download:before {
   content: "\e915"; }
 
-.icon-industy:before {
+.icon-education:before {
   content: "\e916"; }
 
-.icon-link:before {
+.icon-email:before {
   content: "\e917"; }
 
-.icon-linkedin:before {
+.icon-folder:before {
   content: "\e918"; }
 
-.icon-logo:before {
+.icon-geopoint:before {
   content: "\e919"; }
 
-.icon-logo-black:before {
+.icon-google:before {
   content: "\e91a"; }
 
-.icon-photos:before {
+.icon-harvester:before {
   content: "\e91b"; }
 
-.icon-plus:before {
-  content: "\e91c"; }
-
-.icon-progress:before {
-  content: "\e91d"; }
-
-.icon-research:before {
-  content: "\e91e"; }
-
-.icon-search:before {
-  content: "\e91f"; }
-
-.icon-server:before {
-  content: "\e920"; }
-
-.icon-shared-with:before {
-  content: "\e921"; }
-
-.icon-social:before {
-  content: "\e922"; }
-
-.icon-star:before {
+.icon-indeed:before {
   content: "\e923"; }
 
-.icon-survey:before {
+.icon-industy:before {
+  content: "\e91c"; }
+
+.icon-link:before {
+  content: "\e91d"; }
+
+.icon-linkedin:before {
+  content: "\e91e"; }
+
+.icon-logo:before {
+  content: "\e91f"; }
+
+.icon-logo-black:before {
+  content: "\e920"; }
+
+.icon-modified:before {
+  content: "\e921"; }
+
+.icon-money:before {
+  content: "\e922"; }
+
+.icon-photos:before {
   content: "\e924"; }
 
-.icon-text:before {
+.icon-plus:before {
   content: "\e925"; }
 
-.icon-twiddler:before {
+.icon-progress:before {
   content: "\e926"; }
 
-.icon-upload:before {
+.icon-research:before {
   content: "\e927"; }
+
+.icon-rss:before {
+  content: "\e928"; }
+
+.icon-search:before {
+  content: "\e929"; }
+
+.icon-server:before {
+  content: "\e92a"; }
+
+.icon-shared-with:before {
+  content: "\e92b"; }
+
+.icon-social:before {
+  content: "\e92c"; }
+
+.icon-sources:before {
+  content: "\e92d"; }
+
+.icon-star:before {
+  content: "\e92e"; }
+
+.icon-survey:before {
+  content: "\e92f"; }
+
+.icon-telephone:before {
+  content: "\e930"; }
+
+.icon-terms:before {
+  content: "\e931"; }
+
+.icon-text:before {
+  content: "\e932"; }
+
+.icon-twiddler:before {
+  content: "\e933"; }
+
+.icon-twitter:before {
+  content: "\e934"; }
+
+.icon-upload:before {
+  content: "\e935"; }
+
+.icon-user:before {
+  content: "\e936"; }
+
+.icon-work:before {
+  content: "\e937"; }
 
 html {
   box-sizing: border-box; }
