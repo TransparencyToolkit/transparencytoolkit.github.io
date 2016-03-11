@@ -142,9 +142,21 @@
         <h3>List Items (ul)</h3>
         <p>Apply the <code>.list-items</code> class to either the ul element</p>
         <ul class="list-items">
-          <li><i class="icon-work"></i> List Item <a href="#" class="view">.view</a></li>
-          <li><i class="icon-work"></i> List Item <a href="#" class="edit">.edit</a></li>
-          <li><i class="icon-work"></i> List Item <a href="#" class="remove">.remove</a></li>
+          <li>
+            <i class="icon-work"></i> List Item <span>Detail</span>
+            <a href="#" class="primary"><i class="icon-link"></i> primary</a>
+            <a href="#" class="success"><i class="icon-link"></i> success</a>
+          </li>
+          <li>
+            <i class="icon-work"></i> List Item <span>Detail</span>
+            <a href="#" class="warning"><i class="icon-modified"></i> warning</a>
+            <a href="#" class="danger"><i class="icon-modified"></i> danger</a>
+          </li>
+          <li>
+            <i class="icon-work"></i> List Item
+            <a href="#" class="text"><i class="icon-trash"></i> text</a>
+            <a href="#" class="info"><i class="icon-trash"></i> info</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -238,17 +250,29 @@
     <section id="buttons">
       <div class="wrapper">
          <h1>Buttons</h1>
-
-         <a class="button primary">Primary</a>
-         <a class="button success">Success</a>
+         <a class="button primary"><i class="icon-plus"></i> Primary</a>
+         <a class="button success"><i class="icon-checkmark"></i> Success</a>
          <a class="button info">Info</a>
          <a class="button warning">Warning</a>
          <a class="button danger">Danger</a>
          <a class="button text">Text</a>
          <hr>
-         <h5>Button Full</h5>
+         <h5>Buttons Fancy</h5>
+         <div class="dropdown">
+           <div class="dropdown-container">
+             <p class="dropdown-description">Description</p>
+             <p class="dropdown-button">Click to Select</p>
+             <ul class="dropdown-menu dropdown-select">
+               <li>Dropdown Menu Item</li>
+               <li>Another Item</li>
+               <li>Item Three</li>
+               <li>The Last One</li>
+             </ul>
+           </div>
+         </div>
+         <hr>
+         <h5>Buttons Full</h5>
          <p>To make a button fill up a container adding <code>.button-full</code> class</p>
-
          <div class="three-columns">
            <div class="one-column">
              <input type="button" class="button-full" value="Input Button">
@@ -260,7 +284,6 @@
              <a href="javascript:void(0)" class="button text button-full">Link Button</a>
            </div>
          </div>
-
       </div>
     </section>
     <hr>
@@ -288,7 +311,7 @@
         <hr>
         <div class="app-title">
           <h1><span>Step 1</span> App Title Line</h1>
-          <a href="/dogs">Action Button</a>
+          <a href="/dogs"><i class="icon-plus"></i> Action Button</a>
         </div>
       </div>
     </section>
@@ -296,10 +319,11 @@
     <section id="icons">
       <div class="wrapper">
         <h1 id="icons">Icons</h1>
-        <i class="icon-archive"></i>
+        <i class="icon-addresses"></i>
         <i class="icon-agencies"></i>
         <i class="icon-alerts"></i>
         <i class="icon-analysis"></i>
+        <i class="icon-archive"></i>
         <i class="icon-bookmark"></i>
         <i class="icon-briefcase"></i>
         <i class="icon-building"></i>
@@ -322,12 +346,14 @@
         <i class="icon-geopoint"></i>
         <i class="icon-google"></i>
         <i class="icon-harvester"></i>
+        <i class="icon-home"></i>
         <i class="icon-indeed"></i>
         <i class="icon-industry"></i>
         <i class="icon-link"></i>
         <i class="icon-linkedin"></i>
         <i class="icon-logo"></i>
         <i class="icon-logo-black"></i>
+        <i class="icon-map"></i>
         <i class="icon-modified"></i>
         <i class="icon-money"></i>
         <i class="icon-photos"></i>
@@ -341,6 +367,7 @@
         <i class="icon-social"></i>
         <i class="icon-sources"></i>
         <i class="icon-star"></i>
+        <i class="icon-store"></i>
         <i class="icon-survey"></i>
         <i class="icon-text"></i>
         <i class="icon-telephone"></i>
