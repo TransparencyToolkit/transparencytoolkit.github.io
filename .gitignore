@@ -1,4 +1,5 @@
 _site
 .sass-cache
 .DS_Store
-assets/css/
+assets/css/screen.css.map
+assets/css/styleguide.css.map
