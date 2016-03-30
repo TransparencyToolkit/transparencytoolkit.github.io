@@ -1,12 +1,15 @@
 .app-title {
 
+  margin-bottom: $base-spacing;
+
   h1,
   h2,
   h3 {
     float: left;
     text-transform: uppercase;
+    margin-bottom: 0;
+
     span {
-      color: $gray-medium;
       margin-right: .5em;
     }
   }
@@ -22,5 +25,21 @@
   }
 
   @include clearfix;
+
+}
+
+.app-content {
+
+  background-color: $base-white;
+  padding: 1.5em 1.5em .5em 1.5em;
+  margin-bottom: $base-spacing;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $base-black;
+  }
 
 }

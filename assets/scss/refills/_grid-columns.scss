@@ -1,7 +1,45 @@
 /* Grid Columns */
 
-.three-columns {
+.grid-two {
+
+  margin-bottom: $base-spacing;
+
+  @include clearfix;
+
+  .one-column {
+    @include span-columns(6);
+  }
+
+}
+
+.grid-three {
+
+  margin-bottom: $base-spacing;
+
+  @include clearfix;
+
   .one-column {
     @include span-columns(4);
   }
+
+  .two-column {
+    @include span-columns(8);
+  }
+
+}
+
+.grid-four {
+
+  margin-bottom: $base-spacing;
+
+  @include clearfix;
+
+  .one-column {
+    @include span-columns(3);
+  }
+
+  .two-column {
+    @include span-columns(6);
+  }
+
 }
