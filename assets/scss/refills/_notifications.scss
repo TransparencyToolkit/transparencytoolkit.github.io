@@ -1,0 +1,54 @@
+/* Notifications */
+
+.notifications {
+  @include outer-container;
+  padding: 2em 1.5em 0 1.5em;
+  margin-bottom: 0;
+}
+
+.notification {
+
+  $base-spacing: 1.5em !default;
+  $alert-color: $brand-warning !default;
+  $error-color: $brand-danger !default;
+  $notice-color: $brand-primary !default;
+  $success-color: $brand-success !default;
+  $link-hover-color: $gray-medium;
+
+  @mixin flash($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+    display: block;
+    margin-bottom: $base-spacing / 2;
+    padding: $base-spacing / 2;
+    text-align: center;
+    font-weight: bold;
+
+    a {
+      color: $color;
+      text-decoration: underline;
+
+      &:focus,
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  &.alert {
+    @include flash($alert-color, $base-black);
+  }
+
+  &.error {
+    @include flash($error-color, $base-black);
+  }
+
+  &.notice {
+    @include flash($notice-color, $base-white);
+  }
+
+  &.success {
+    @include flash($success-color, $base-white);
+  }
+
+}
