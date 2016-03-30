@@ -24,6 +24,7 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-addresses:before {
     content: "\e900";
 }
@@ -111,20 +112,23 @@ i {
 .icon-email:before {
     content: "\e91c";
 }
-.icon-folder:before {
+.icon-fax:before {
     content: "\e91d";
 }
-.icon-geopoint:before {
+.icon-folder:before {
     content: "\e91e";
 }
-.icon-google:before {
+.icon-geopoint:before {
     content: "\e91f";
 }
-.icon-harvester:before {
+.icon-google:before {
     content: "\e920";
 }
-.icon-home:before {
+.icon-harvester:before {
     content: "\e921";
+}
+.icon-home:before {
+    content: "\e922";
 }
 .icon-indeed:before {
     content: "\e923";
@@ -153,78 +157,87 @@ i {
 .icon-money:before {
     content: "\e92b";
 }
-.icon-photos:before {
+.icon-phone-extension:before {
     content: "\e92c";
 }
-.icon-plus:before {
+.icon-photos:before {
     content: "\e92d";
 }
-.icon-progress:before {
+.icon-plus:before {
     content: "\e92e";
 }
-.icon-recrawl:before {
+.icon-progress:before {
     content: "\e92f";
 }
-.icon-research:before {
+.icon-recrawl:before {
     content: "\e930";
 }
-.icon-rss:before {
+.icon-research:before {
     content: "\e931";
 }
-.icon-search:before {
+.icon-rss:before {
     content: "\e932";
 }
-.icon-server:before {
+.icon-search:before {
     content: "\e933";
 }
-.icon-shared-with:before {
+.icon-server:before {
     content: "\e934";
 }
-.icon-social:before {
+.icon-shared-with:before {
     content: "\e935";
 }
-.icon-sources:before {
+.icon-social:before {
     content: "\e936";
 }
-.icon-star:before {
+.icon-sources:before {
     content: "\e937";
 }
-.icon-store:before {
+.icon-star:before {
     content: "\e938";
 }
-.icon-survey:before {
+.icon-store:before {
     content: "\e939";
 }
-.icon-telephone:before {
+.icon-survey:before {
     content: "\e93a";
 }
-.icon-terms:before {
+.icon-telephone:before {
     content: "\e93b";
 }
-.icon-text:before {
+.icon-terms:before {
     content: "\e93c";
 }
-.icon-trash:before {
+.icon-text:before {
     content: "\e93d";
 }
-.icon-twiddler:before {
+.icon-trash:before {
     content: "\e93e";
 }
-.icon-twitter:before {
+.icon-twiddler:before {
     content: "\e93f";
 }
-.icon-upload:before {
+.icon-twitter:before {
     content: "\e940";
 }
-.icon-user:before {
+.icon-upload:before {
     content: "\e941";
 }
-.icon-view:before {
+.icon-user:before {
     content: "\e942";
 }
-.icon-work:before {
+.icon-view:before {
     content: "\e943";
 }
-.icon-x:before {
+.icon-work:before {
     content: "\e944";
+}
+.icon-x:before {
+    content: "\e945";
+}
+
+
+/* Custom Hacks */
+.icon-fbi-dhs-hack {
+  content: "\e943";
 }

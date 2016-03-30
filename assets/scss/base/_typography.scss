@@ -16,6 +16,10 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+
+  span {
+    color: $gray-medium;
+  }
 }
 
 h1 {
@@ -33,7 +37,7 @@ h5 {
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  margin: 0 0 ($small-spacing * 1.5) 0;
 }
 
 a {
